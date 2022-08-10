@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "Cross-Trajectory Representation Learning for Zero-Shot Generalization in RL"
+date:   2022-03-16 22:21:59 +00:00
+image: /images/ctrl_2022.jpg
+categories: research
+author: "Ahmed M. Ahmed"
+venue: "International Conference on Learning Representations (ICLR), 2022"
+authors: "Bogdan Mazoure, <strong>Ahmed M. Ahmed</strong>, Patrick MacAlpine, R Devon Hjelm, Andrey Kolobov"
+#subtitle: "Dynamics based 3D skeletal hand tracking"
+arxiv: https://arxiv.org/pdf/2106.02193
+code: https://github.com/bmazoure/ctrl_public
+---
+We propose Cross-Trajectory Representation Learning (CTRL) a novel self-supervised learning objective that maintains a set of trajectories embeddings representative of different behaviors onto which we can project any given trajectory from the transition dynamics. This allows CTRL to avoid overfitting to rewards in the encoder and improved generalization on the challenging Procgen Benchmark compared to prior work. We also show a connection to psuedo-bisimulation metrics in Reinforcement Learning.
+<!-- <blockquote>
+  <p>
+    This research explores a new approach to tracking hands, or any articulated model, by using an augmented rigid body simulation. This allows us to phrase 3D object tracking as a linear complementarity problem with a well-defined solution. Based on a depth sensor&#8217;s samples, the system generates constraints that limit motion orthogonal to the rigid body model&#8217;s surface. These constraints, along with prior motion, collision/contact constraints, and joint mechanics, are resolved with a projected Gauss-Seidel solver. Due to camera noise properties and attachment errors, the numerous surface constraints are impulse capped to avoid overpowering mechanical constraints. To improve tracking accuracy, multiple simulations are spawned at each frame and fed a variety of heuristics, constraints and poses. A 3D error metric selects the best-fit simulation, helping the system handle challenging hand motions.
+  </p>
+</blockquote> -->
