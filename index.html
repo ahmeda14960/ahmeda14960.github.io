@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <title>{{ site.name }}</title>
+  <title>{Ahmed M. Ahmed}</title>
 
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 
-  <meta name="author" content="{{ site.name }}" />
+  <meta name="author" content="{Ahmed M. Ahmed}" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet" type="text/css" href="style.css" />
@@ -31,18 +31,19 @@
                <a href="https://ai.stanford.edu/~cbfinn/">Chelsea Finn</a> and supported by a  <a href="https://www.nsfgrfp.org/"> NSF Graduate Research Fellowship </a> .
               </p>
               <p>
-                I was also an undergraduate at Stanford, majoring in <a href="https://mcs.stanford.edu/">Mathematical and Computational Science</a> and I was fortunate to have 
-                <a href="https://mykel.kochenderfer.com/">Mykel Kochenderfer</a> as my honor's thesis advisor.  
-                I'm also grateful to have interned under <a href="https://www.microsoft.com/en-us/research/people/akolobov/">Andrey Kolobov</a> at the 
-                <a href="https://www.microsoft.com/en-us/research/group/robot-learning-group/">Robot Learning Group</a> in MSR Redmond. 
+                I was also an undergraduate at Stanford, majoring in <a href="https://mcs.stanford.edu/">Mathematical and Computational Science</a> with a minor in African & African American Studies.
+                I'm incredibly fortunate to have spent time at the <a href="https://www.microsoft.com/en-us/research/group/robot-learning-group/">Robot Learning Group</a> in MSR Redmond under 
+                <a href="https://www.microsoft.com/en-us/research/people/akolobov/">Andrey Kolobov</a> and to have been advised by <a href="https://mykel.kochenderfer.com/">Mykel Kochenderfer</a> 
+                for my honor's thesis.
               </p>
               <p>
-               Outside of my research, I work on improving outreach and inclusion in CS research through my work as a mentor for CURIS <a href="https://curis.stanford.edu/">CURIS</a>, the Stanford CS department's REU program. 
-               In my free time, I enjoy playing the drum kit and basketball.
+              
               </p>
               <p style="text-align:center">
                 <a href="https://github.com/ahmeda14960">GitHub</a> &nbsp;/&nbsp;
                 <a href="https://scholar.google.com/citations?user=_W0keMEAAAAJ&hl=en&authuser=1">Google Scholar</a> &nbsp;/&nbsp;
+                <a href="https://twitter.com/AhmedSQRD">Twitter</a> &nbsp;/&nbsp;
+
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
@@ -62,49 +63,53 @@
             </td>
           </tr>
         </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'research' %}
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
               <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
             </td>
             <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
+              <h3>{Cross-Trajectory Representation Learning for Zero-Shot Generalization in RL}</h3>
               <br>
-              {{post.authors}}
+              {Bogdan Mazoure, <strong>Ahmed M. Ahmed</strong>, Patrick MacAlpine, R Devon Hjelm, Andrey Kolobov}
 
               <br>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
+              <em>{International Conference on Learning Representations (ICLR), 2022}</em>, {{ 2022-03-16 22:21:59 +00:00 | date: "%Y" }}
               <br>
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
+              <a href="{{https://arxiv.org/pdf/2106.02193}}">arxiv</a> 
+              <a href="{{https://github.com/bmazoure/ctrl_public}}">code</a> /
               <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
+              <p>
+                We propose Cross-Trajectory Representation Learning (CTRL) a novel self-supervised learning 
+                objective that maintains a set of trajectories embeddings representative of different behaviors 
+                onto which we can project any given trajectory from the transition dynamics. This allows CTRL to avoid 
+                overfitting to rewards in the encoder and improved generalization on the challenging Procgen Benchmark compared
+                 to prior work. We also show a connection to psuedo-bisimulation metrics in Reinforcement Learning.
+              </p>
             </td>
           </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
         </table>
         <br>
         <br>
         <br>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Outreach</h2>
+              <p>
+                 Outside of my research, I'm passionate about addressing issues of diversity and inclusion in academia at large. To this end I've worked on improving outreach
+                 and inclusion in CS research through my work as mentor <a href="https://curis.stanford.edu/">CURIS</a>, the Stanford CS department's REU program. I helped spearhead initatives 
+                 such as the <a href="https://sing.stanford.edu/curis-fellowships/"> CURIS fellows program</a>, aimed to provide research opportunities for historically underrepresented students and <a href="https://curis.stanford.edu/pure_student/"> PURE</a>
+                 which provides research funding for First-Generation/Low-Income students.
+              </p>
+            </td>
+
+            <td style="padding:2.5%;width:40%;max-width:40%">
+              <img style="width:100%;max-width:100%" alt="profile photo" src="images/dei_town_hall_photo.jpg" title="Stanford CS DEI Town Hall">
+            </td>
+          </tr>
+        </table>
         <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
