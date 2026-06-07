@@ -387,6 +387,12 @@
         if (activeFitOk(fit, fitType)) {
           for (const row of heldRows) {
             const predicted = predictScaling(fit, fitType, Number(row.scale_flops));
+            const actual = Number(row.value);
+            const error = predicted - actual;
+            const pctError = actual !== 0 ? (error / actual) * 100 : null;
+            const signedError = `${error >= 0 ? "+" : ""}${error.toFixed(5)}`;
+            const signedPctError = pctError == null ? "n/a" : `${pctError >= 0 ? "+" : ""}${pctError.toFixed(2)}%`;
+            const absPctError = pctError == null ? "n/a" : `${Math.abs(pctError).toFixed(2)}%`;
             traces.push({
               x: [row.scale_flops],
               y: [predicted],
@@ -396,12 +402,15 @@
               legendgroup: key,
               showlegend: false,
               marker: {symbol: "x", size: 12, color, line: {width: 2}},
-              hovertext: [`${row.scale} predicted (cutoff ${cutoffScale})<br>${labelBase}`],
+              hovertext: [
+                `${row.scale} predicted (cutoff ${cutoffScale})<br>${labelBase}`
+                + `<br>actual=${actual.toFixed(5)}`
+                + `<br>error=${signedError}`
+                + `<br>relative error=${signedPctError}`
+                + `<br>abs relative error=${absPctError}`,
+              ],
               hovertemplate: "%{hovertext}<br>flops=%{x:.3e}<br>predicted=%{y:.5f}<extra></extra>",
             });
-            const actual = Number(row.value);
-            const error = predicted - actual;
-            const pctError = actual !== 0 ? (error / actual) * 100 : null;
             predTableRows.push({
               recipe: labelBase,
               scale: row.scale,
